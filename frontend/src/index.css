@@ -1,0 +1,174 @@
+Text file: index.css
+Latest content with line numbers:
+1	@import "tailwindcss";
+2	@import "tw-animate-css";
+3	
+4	@custom-variant dark (&:is(.dark *));
+5	
+6	@theme inline {
+7	  --radius-sm: calc(var(--radius) - 4px);
+8	  --radius-md: calc(var(--radius) - 2px);
+9	  --radius-lg: var(--radius);
+10	  --radius-xl: calc(var(--radius) + 4px);
+11	  --color-background: var(--background);
+12	  --color-foreground: var(--foreground);
+13	  --color-card: var(--card);
+14	  --color-card-foreground: var(--card-foreground);
+15	  --color-popover: var(--popover);
+16	  --color-popover-foreground: var(--popover-foreground);
+17	  --color-primary: var(--primary);
+18	  --color-primary-foreground: var(--primary-foreground);
+19	  --color-secondary: var(--secondary);
+20	  --color-secondary-foreground: var(--secondary-foreground);
+21	  --color-muted: var(--muted);
+22	  --color-muted-foreground: var(--muted-foreground);
+23	  --color-accent: var(--accent);
+24	  --color-accent-foreground: var(--accent-foreground);
+25	  --color-destructive: var(--destructive);
+26	  --color-destructive-foreground: var(--destructive-foreground);
+27	  --color-border: var(--border);
+28	  --color-input: var(--input);
+29	  --color-ring: var(--ring);
+30	  --color-chart-1: var(--chart-1);
+31	  --color-chart-2: var(--chart-2);
+32	  --color-chart-3: var(--chart-3);
+33	  --color-chart-4: var(--chart-4);
+34	  --color-chart-5: var(--chart-5);
+35	  --color-sidebar: var(--sidebar);
+36	  --color-sidebar-foreground: var(--sidebar-foreground);
+37	  --color-sidebar-primary: var(--sidebar-primary);
+38	  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+39	  --color-sidebar-accent: var(--sidebar-accent);
+40	  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+41	  --color-sidebar-border: var(--sidebar-border);
+42	  --color-sidebar-ring: var(--sidebar-ring);
+43	}
+44	
+45	:root {
+46	  --primary: var(--color-blue-700);
+47	  --primary-foreground: var(--color-blue-50);
+48	  --sidebar-primary: var(--color-blue-600);
+49	  --sidebar-primary-foreground: var(--color-blue-50);
+50	  --chart-1: var(--color-blue-300);
+51	  --chart-2: var(--color-blue-500);
+52	  --chart-3: var(--color-blue-600);
+53	  --chart-4: var(--color-blue-700);
+54	  --chart-5: var(--color-blue-800);
+55	  --radius: 0.65rem;
+56	  --background: oklch(1 0 0);
+57	  --foreground: oklch(0.235 0.015 65);
+58	  --card: oklch(1 0 0);
+59	  --card-foreground: oklch(0.235 0.015 65);
+60	  --popover: oklch(1 0 0);
+61	  --popover-foreground: oklch(0.235 0.015 65);
+62	  --secondary: oklch(0.98 0.001 286.375);
+63	  --secondary-foreground: oklch(0.4 0.015 65);
+64	  --muted: oklch(0.967 0.001 286.375);
+65	  --muted-foreground: oklch(0.552 0.016 285.938);
+66	  --accent: oklch(0.967 0.001 286.375);
+67	  --accent-foreground: oklch(0.141 0.005 285.823);
+68	  --destructive: oklch(0.577 0.245 27.325);
+69	  --destructive-foreground: oklch(0.985 0 0);
+70	  --border: oklch(0.92 0.004 286.32);
+71	  --input: oklch(0.92 0.004 286.32);
+72	  --ring: oklch(0.623 0.214 259.815);
+73	  --sidebar: oklch(0.985 0 0);
+74	  --sidebar-foreground: oklch(0.235 0.015 65);
+75	  --sidebar-accent: oklch(0.967 0.001 286.375);
+76	  --sidebar-accent-foreground: oklch(0.141 0.005 285.823);
+77	  --sidebar-border: oklch(0.92 0.004 286.32);
+78	  --sidebar-ring: oklch(0.623 0.214 259.815);
+79	}
+80	
+81	.dark {
+82	  --primary: var(--color-blue-700);
+83	  --primary-foreground: var(--color-blue-50);
+84	  --sidebar-primary: var(--color-blue-500);
+85	  --sidebar-primary-foreground: var(--color-blue-50);
+86	  --background: oklch(0.141 0.005 285.823);
+87	  --foreground: oklch(0.85 0.005 65);
+88	  --card: oklch(0.21 0.006 285.885);
+89	  --card-foreground: oklch(0.85 0.005 65);
+90	  --popover: oklch(0.21 0.006 285.885);
+91	  --popover-foreground: oklch(0.85 0.005 65);
+92	  --secondary: oklch(0.24 0.006 286.033);
+93	  --secondary-foreground: oklch(0.7 0.005 65);
+94	  --muted: oklch(0.274 0.006 286.033);
+95	  --muted-foreground: oklch(0.705 0.015 286.067);
+96	  --accent: oklch(0.274 0.006 286.033);
+97	  --accent-foreground:  oklch(0.92 0.005 65);
+98	  --destructive: oklch(0.704 0.191 22.216);
+99	  --destructive-foreground: oklch(0.985 0 0);
+100	  --border: oklch(1 0 0 / 10%);
+101	  --input: oklch(1 0 0 / 15%);
+102	  --ring: oklch(0.488 0.243 264.376);
+103	  --chart-1: var(--color-blue-300);
+104	  --chart-2: var(--color-blue-500);
+105	  --chart-3: var(--color-blue-600);
+106	  --chart-4: var(--color-blue-700);
+107	  --chart-5: var(--color-blue-800);
+108	  --sidebar: oklch(0.21 0.006 285.885);
+109	  --sidebar-foreground: oklch(0.85 0.005 65);
+110	  --sidebar-accent: oklch(0.274 0.006 286.033);
+111	  --sidebar-accent-foreground:  oklch(0.985 0 0);
+112	  --sidebar-border: oklch(1 0 0 / 10%);
+113	  --sidebar-ring: oklch(0.488 0.243 264.376);
+114	}
+115	
+116	@layer base {
+117	  * {
+118	    @apply border-border outline-ring/50;
+119	  }
+120	  body {
+121	    @apply bg-background text-foreground;
+122	  }
+123	  button:not(:disabled),
+124	  [role="button"]:not([aria-disabled="true"]),
+125	  [type="button"]:not(:disabled),
+126	  [type="submit"]:not(:disabled),
+127	  [type="reset"]:not(:disabled),
+128	  a[href],
+129	  select:not(:disabled),
+130	  input[type="checkbox"]:not(:disabled),
+131	  input[type="radio"]:not(:disabled) {
+132	    @apply cursor-pointer;
+133	  }
+134	}
+135	
+136	@layer components {
+137	  /**
+138	   * Custom container utility that centers content and adds responsive padding.
+139	   *
+140	   * This overrides Tailwind's default container behavior to:
+141	   * - Auto-center content (mx-auto)
+142	   * - Add responsive horizontal padding
+143	   * - Set max-width for large screens
+144	   *
+145	   * Usage: <div className="container">...</div>
+146	   *
+147	   * For custom widths, use max-w-* utilities directly:
+148	   * <div className="max-w-6xl mx-auto px-4">...</div>
+149	   */
+150	  .container {
+151	    width: 100%;
+152	    margin-left: auto;
+153	    margin-right: auto;
+154	    padding-left: 1rem; /* 16px - mobile padding */
+155	    padding-right: 1rem;
+156	  }
+157	
+158	  @media (min-width: 640px) {
+159	    .container {
+160	      padding-left: 1.5rem; /* 24px - tablet padding */
+161	      padding-right: 1.5rem;
+162	    }
+163	  }
+164	
+165	  @media (min-width: 1024px) {
+166	    .container {
+167	      padding-left: 2rem; /* 32px - desktop padding */
+168	      padding-right: 2rem;
+169	      max-width: 1280px; /* Standard content width */
+170	    }
+171	  }
+172	}
